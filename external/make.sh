@@ -142,7 +142,6 @@ APKTOOL=true
 EROFS_UTILS=true
 IMG2SDAT=true
 SAMFIRM=true
-SIGNAPK=true
 SMALI=true
 OMCDECODER=true
 
@@ -171,10 +170,6 @@ SAMFIRM_EXEC=(
     "samfirm"
 )
 CHECK_TOOLS "${SAMFIRM_EXEC[@]}" && SAMFIRM=false
-SIGNAPK_EXEC=(
-    "signapk" "signapk.jar"
-)
-CHECK_TOOLS "${SIGNAPK_EXEC[@]}" && SIGNAPK=false
 SMALI_EXEC=(
     "android-smali.jar" "baksmali" "smali" "smali-baksmali.jar"
 )
@@ -240,15 +235,6 @@ if $SAMFIRM; then
     )
 
     BUILD "samfirm.js" "$SRC_DIR/external/samfirm.js" "${SAMFIRM_CMDS[@]}"
-fi
-if $SIGNAPK; then
-    SIGNAPK_CMDS=(
-        "./gradlew build"
-        "cp -a \"scripts/linux/signapk\" \"$TOOLS_DIR\""
-        "cp -a \"signapk/build/libs/signapk-all.jar\" \"$TOOLS_DIR/signapk.jar\""
-    )
-
-    BUILD "signapk" "$SRC_DIR/external/signapk" "${SIGNAPK_CMDS[@]}"
 fi
 if $SMALI; then
     SMALI_CMDS=(
