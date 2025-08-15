@@ -1,0 +1,9 @@
+/system u:object_r:system_file:s0
+/system/priv-app u:object_r:system_file:s0
+/system/priv-app/HealthServicePAR u:object_r:system_file:s0
+/system/priv-app/HealthServicePAR/HealthServicePAR\.apk u:object_r:system_file:s0
+/system/priv-app/HealthServicePAR/lib u:object_r:system_file:s0
+/system/priv-app/HealthServicePAR/lib/arm u:object_r:system_file:s0
+/system/priv-app/HealthServicePAR/lib/arm64 u:object_r:system_file:s0
+/system/priv-app/HealthServicePAR/lib/arm/libPlatformStrings\.so u:object_r:system_file:s0
+/system/priv-app/HealthServicePAR/lib/arm64/libPlatformStrings\.so u:object_r:system_file:s0
